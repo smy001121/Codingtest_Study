@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int arr[5];
+
+	for (int i = 0; i < 5; i++) {
+		cin >> arr[i];
+	}
+	
+	int result = 0;
+
+	while (1) {
+		result++;
+		int cnt = 0;
+		for (int i = 0; i < 5; i++) {
+			if (result % arr[i] == 0) cnt++;
+		}
+
+		if (cnt >= 3) break;
+	}
+
+	cout << result;
+}
